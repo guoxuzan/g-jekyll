@@ -1,20 +1,17 @@
-{%- if page.comments != false and jekyll.environment == "production" -%}
-
-  <div id="disqus_thread"></div>
+<section class="post-comments">
+  <div id="container"></div>
+  <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
   <script>
-    var disqus_config = function () {
-      this.page.url = '{{ page.url | absolute_url }}';
-      this.page.identifier = '{{ page.url | absolute_url }}';
-    };
-
-    (function() {
-      var d = document, s = d.createElement('script');
-
-      s.src = 'https://{{ site.disqus.shortname }}.disqus.com/embed.js';
-
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
+      var gitment = new Gitment({
+          id: '<%= page.date %>', // 可选。默认为 location.href
+          owner: 'guoxuzan',
+          repo: 'BlogComments',
+          oauth: {
+              client_id: '7cd5cc6e328531db7de1',
+              client_secret: '6c6cb6f1eada0768fe27a570df1db782bfba1d0a',
+          },
+      })
+      gitment.render('container')
   </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-{%- endif -%}
+</section>
