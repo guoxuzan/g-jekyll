@@ -7,25 +7,25 @@
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li class="p-name">
-            </li>
-            {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {%- endif -%}
+            <li><a class="u-email" href="mailto:{{ site.email }}">Gmail</a></li>
+            <li><a class="u-email" target="_blank" href="https://github.com/guoxuzan">Github</a></li>
         </ul>
       </div>
 
-      <div class="footer-col footer-col-2">
-        {%- include social.html -%}
+      <div class="footer-col footer-col-3">
+        <ul class="contact-list">
+            <li><a class="u-email" target="_blank" href="https://beian.miit.gov.cn">京ICP备16022259号</a></li>
+            <li><a href="{{ "/feed.xml" | relative_url }}">RSS</a></li>
+        </ul>
       </div>
 
-      <div class="footer-col footer-col-3">
+      <!-- <div class="footer-col footer-col-3">
         <a class="u-email" target="_blank" href="https://beian.miit.gov.cn">京ICP备16022259号</a>
       </div>
 
-      <div class="footer-col footer-col-4">
+      <div class="footer-col footer-col-3">
         <p ><a href="{{ "/feed.xml" | relative_url }}">RSS</a></p>
-      </div>
+      </div> -->
 
       <!-- <div class="footer-col footer-col-3">
         <p>{{- site.description | escape -}}</p>
